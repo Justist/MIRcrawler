@@ -1,0 +1,186 @@
+% This is "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate-05-2015}
+\usepackage{placeins}
+
+\begin{document}
+
+% Copyright
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\doi{0}
+
+% ISBN
+\isbn{0}
+
+%Conference
+%\conferenceinfo{PLDI '13}{June 16--19, 2013, Seattle, WA, USA}
+
+%\acmPrice{\$15.00}
+
+%
+% --- Author Metadata here ---
+%\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Does multithreading speed up webcrawlers?}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{1} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Simon Klaver\\
+       \affaddr{Leiden University}\\
+       \email{simonrklaver@gmail.com}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+\date{}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+Not as far as this project is concerned.
+\end{abstract}
+
+% We no longer use \terms command
+%\terms{Theory}
+
+\keywords{Webcrawling}
+
+\section{Introduction}
+Crawling the web is something which search engines do often, and which can take a lot of time depending on how the content is crawled, and how it is stored. This means that while crawling webpages is in itself an easy task, it depends on multiple factors how fast it is. These factors include, but are not limited to: the parser, the indexing method, and the overall complexity of the code. For example Google, which is the part of Alphabet which harbours one of the largest search engines on the world wide web, does a lot of crawling and indexing to supply the results for any search query within a fraction of a second. To achieve this, a highly optimised crawler has to be designed and used. To achieve higher speeds, multithreading most likely plays a major role.
+
+\section{Framework}
+\subsection{Initial code}
+For this project a sequential implementation of a webcrawler is given (see the `GIVEN.zip' file in the SOURCE folder). This includes an html parser, an indexing method, and both a crawler (webspider) and a search engine (webquery). It can be made by executing `make', and executed by executing `make run'. The code is written by Simon Klaver, who is also author of this paper.
+\subsection{External libraries}
+To enhance the code, the external library TCLAP is used. This software can be downloaded from \\\verb+http://tclap.sourceforge.net/+, and is already given in the zip containing this report.
+\subsection{Compiling and running the code}
+After extracting the zip file, go to the folder SOURCE, extract `SOURCE.zip' and open a terminal prompt in the folder C++. Then, to compile the code, execute the command `make'. To run the code, either run `make run' or `make debug' (the latter is less error-prone, but creates more output).\\
+Be aware that when running `make clean', to clean up the folder of the executable file and the object files, the folders containing the indexes will also be deleted by default. To change this, either alter the Makefile, or simply copy the folders out of the current one, run the cleaning command, and copy them back in.
+
+\section{Code enhancement}
+To enable multithreading in the given code, first of all the Webspider class should be parallelised, which means a superclass has to be written which will execute the webspider in different threads. For this, the class Threadspider is written, which spawns all threads and joins them with the main thread afterwards. Webspider then is optimised to use a deque for the queue, so multiple threads can just take the front element in the queue and delete it, instead of having a pointer to the current element which is shared by all the threads. In theory there should be no difference, but the unordered\_set which holds the queue in the given code is unordered as the name implies, so when adding new elements it is not given that they are inserted after the current element, and therefore that when incrementing the pointer the program will reach a new element instead of an old one or the end of the queue. Aside from that, mutexes have been placed around code involving the queue and code involving indexing to prevent errors regarding multiple threads accessing the same element in the queue, or multiple threads accessing the same file at the same time.\\
+At some point however, the original parser HTMLSTREAMPARSER broke due to something, and was unusable even though nothing in the original code regarding it seemed changed. So a new html parser had to be found. After searching and having found both \verb+libXML+ and \verb+Gumbo+, both of which lacked usable examples and overall usability as the linking did not work, a first-party parser was used, and implemented in class Htmlparser. This code is entirely self-written. \\
+To double down on that: Code which is not self-written has in comments above said code a mention of who else wrote it.
+
+\FloatBarrier
+\section{Results}
+The results are generated by running `time make run', after which the total execution time is taken. Alternatively the user time could be registered, but is shows the same pattern as the total execution time. The results can be found in Figure \ref{threadtable}.\\
+The non-scaling aspect of the results probably mean that the parsing of the sites, which is about the only thing which is multithreaded in this project, is done so quickly by the program that it does not matter whether it runs in one or more threads. Therefore the bottleneck should either lie at the downloading of the web pages, or the indexing, both of which cannot be multithreaded: The first one is because libcurl does not like the std::thread module for some reason, and most crashes are circumvented by placing a std::mutex on the downloading, and the second because files tend to get erroneous when multiple threads are writing to it at the same time.
+
+\begin{figure}[h!]
+ \begin{tabular}{l|c|c|c|c}
+  Amount of threads: & 1 & 2 & 4 & 8 \\
+   \hline
+   & 22:45 & 22:36 & 23:08 & 22:11 \\
+ \end{tabular}
+ \caption{Total execution time of the parser with given amount of threads}
+ \label{threadtable}
+\end{figure}
+\FloatBarrier
+
+\section{Conclusion and discussion}
+The given code cannot be optimised by implementing threading, as adding even up to 8 times as many threads does not show a significant reduction in total execution time, or even any reduction at all when looking at the result of using 4 threads. Aside from that, the code also crashes due to segmentation faults or halts at random in a lot of cases, which suggest the implementation isn't that great. However, due to time constraints, this issue cannot be investigated further.
+
+\end{document}
